@@ -1,0 +1,30 @@
+﻿@page "/editstudent"
+@page "/editstudent/{Id}"
+
+<section>
+    <h1>Details</h1>
+
+    <EditForm Model="@student" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="form-group">
+            <label>Student ID</label>
+            <InputNumber disabled class="form-control"  @bind-Value="@student.StudentID" id="ID"></InputNumber>
+        </div>
+        <div class="form-group">
+            <label>Student Name</label>
+            <InputText class="form-control" @bind-Value="@student.StudentName" id="Name"></InputText>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-warning">Save Item</button>
+
+            @if (!String.IsNullOrEmpty(Id))
+            {
+                <a @onclick="@DeleteStudent" class="btn btn-danger">Delete</a>
+            }
+            <a @onclick="@goback" class="btn">Back</a>
+        </div>
+
+        <label>@Message</label>
+    </EditForm>
+</section>

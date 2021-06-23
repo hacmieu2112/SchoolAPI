@@ -1,0 +1,9 @@
+C:\Users\Doktoh\source\repos\BlazorSchool\DataLibrary\bin\Debug\netstandard2.0\DataLibrary.deps.json
+C:\Users\Doktoh\source\repos\BlazorSchool\DataLibrary\bin\Debug\netstandard2.0\DataLibrary.dll
+C:\Users\Doktoh\source\repos\BlazorSchool\DataLibrary\bin\Debug\netstandard2.0\DataLibrary.pdb
+C:\Users\Doktoh\source\repos\BlazorSchool\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.csprojAssemblyReference.cache
+C:\Users\Doktoh\source\repos\BlazorSchool\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.AssemblyInfoInputs.cache
+C:\Users\Doktoh\source\repos\BlazorSchool\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.AssemblyInfo.cs
+C:\Users\Doktoh\source\repos\BlazorSchool\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Doktoh\source\repos\BlazorSchool\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.dll
+C:\Users\Doktoh\source\repos\BlazorSchool\DataLibrary\obj\Debug\netstandard2.0\DataLibrary.pdb

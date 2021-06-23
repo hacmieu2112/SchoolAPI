@@ -1,0 +1,35 @@
+﻿@page "/School"
+
+<h1>Student</h1>
+
+@if (students == null)
+{
+    <p>Loading ...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Student ID</td>
+                <td>Student Name</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in students)
+            {
+                <tr>
+                    <td>@item.StudentID</td>
+                    <td>@item.StudentName</td>
+                    <td>
+                        <a href="@($"editstudent/{item.StudentID}")" class="btn btn-warning" >Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="@($"/editstudent")" class="btn btn-success">Add New Student</a>
+}
+

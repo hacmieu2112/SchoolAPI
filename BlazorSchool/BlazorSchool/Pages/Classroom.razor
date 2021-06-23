@@ -1,0 +1,45 @@
+﻿@page "/classroom"
+
+@using DataLibrary
+@using BlazorSchool.Models
+@using Microsoft.Extensions.Configuration
+@inject IDataAccess _data
+@inject IConfiguration _config
+
+<h3>Classroom</h3>
+
+@if (classroom == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table border="1" style="text-align:center">
+        <tr>
+            <th>Class</th>
+            <th>Student</th>
+        </tr>
+        @foreach (var c in classroom)
+        {
+            <tr>
+                <td>@c.ClassName</td>
+                <td>@c.StudentName</td>
+            </tr>
+        }
+    </table>
+}
+
+
+@code {
+    List<ClassroomModel> classroom;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = "SELECT class.ClassName, student.StudentName FROM studentinclass,student,class WHERE class.ClassID = studentinclass.ClassID AND studentinclass.StudentID = student.StudentID";
+
+        classroom = await _data.LoadData<ClassroomModel, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+    }
+
+
+}
